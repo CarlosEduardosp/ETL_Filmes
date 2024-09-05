@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-
+import ssl
 
 class ConnectionDB:
 
@@ -11,7 +11,7 @@ class ConnectionDB:
         self.__url_conexao = "mongodb+srv://guitarristas2004:EzlSVlyCrTxMfEKe@cluster0.wi3ae.mongodb.net/?retryWrites=true&w=majority&tls=true"
 
         # Criando uma instância de MongoClient e conectando-se ao cluster
-        self.__client = MongoClient(self.__url_conexao)
+        self.__client = MongoClient(self.__url_conexao, tls=True, tlsAllowInvalidCertificates=True)
 
     def conectardb(self):
 
