@@ -13,8 +13,6 @@ def select_all():
 
     data_response = select.select()
 
-    print(data_response)
-
     response = {
         "Success": 200,
         "Message": "O objetivo desta API é coletar dados de uma página web, transformá-los e salvá-los em um banco de dados MongoDB na nuvem,"
